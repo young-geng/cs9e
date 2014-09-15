@@ -1,0 +1,15 @@
+1. Type "hostname"
+2. uname -s -v
+3. echo $HOME
+4. who
+5. wc -w /usr/share/lib/dict/words
+6. groups
+7. ls -R
+8. man -k bash
+
+a. chmod -R 744 public_html
+b. 711 means rwx for owner, x for group and all users. You cannot view or download it from browser
+c. 600 means rw for owner, none for group or all users. You can still view list, but not downloading readme.txt
+d. 700 means rwx for owner, none for group or all users. You can't do anything
+e. chmod -R 744 public_html
+
