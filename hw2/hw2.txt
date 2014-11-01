@@ -39,3 +39,17 @@
 4.
     alias nestX='ssh -c arcfour,blowfish-cbc -XC -X young@nest.ddns.net'
 
+
+
+========== Part 3 =========
+
+1.
+    sort --key=5 -n -r al.batters.88 | cut -c 1-18,35-41 | head -n 10
+
+2.
+    cat al.batters.88 | cut -c 1-18,42-45,74-77 | grep '.\{23\} 0' | sort -k 2 -r | cut -c 1-21  
+
+3.
+    cat al.batters.88 | sort -k 5 -n -r | head -n 10 > tmp
+    cat al.batters.88 | sort -k 13 -n -r | head -n 10 | comm -1 -2 - tmp
+
