@@ -1,0 +1,41 @@
+1.
+    ls -d .*/ 
+    ls -aF | grep '\..*/'
+
+2.
+    mkdir \!\*
+    mkdir \$HOME
+    mkdir "..."
+    mkdir \"What\'s\ For\ Dinner\?\"
+    mkdir '-'
+
+3.
+    ls /usr/bin/[abc]*
+    
+
+4.
+    echo {a..d}{a..d}
+
+
+========== Part 2 =========
+
+1. 
+    PS1='\u\h:\W$ '
+
+2.
+    cd ~
+    touch .todo
+    echo 'cat ~/.todo' >> ~/.bash_profile
+
+3.
+    cd ~
+    mkdir bin
+    PATH=$PATH:~/bin
+    export PATH
+    
+    # Path are searched in order of the string
+    # File in bin would override system command
+
+4.
+    alias nestX='ssh -c arcfour,blowfish-cbc -XC -X young@nest.ddns.net'
+
