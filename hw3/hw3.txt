@@ -1,0 +1,29 @@
+======== Part I ========
+1.
+    Ctrl - z
+
+2.
+    Program may have msg handler to perform operations before terminating
+
+
+
+======== Part II =======
+1.
+    a. Ctrl - z
+    b.  Just see the pid after suspension or
+        ps aux | grep ' cat' | grep -v 'grep'
+    c. killall -u 'USERNAME' cat
+    
+2.
+    Same as 1
+
+3.
+    I can veryfy by bring it to the foregroud using fg, or check its status with ps
+    
+
+======== Part III ======
+1.
+    crontab -e
+    Add line 
+        */10 * * * * quota > ~/public_html/disk_usage.txt
+
