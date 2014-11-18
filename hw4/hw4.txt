@@ -12,10 +12,10 @@
     svnadmin create myrepo
     svn checkout file:///home/cc/cs9e-1/fa14/class/cs9e-1bf/tmp/myrepo myrepocheckedout
     ....
-    svn add hello.c
+    svn add hello.cpp
     svn commit -m "hello"
     ....
     svn checkout file:///home/cc/cs9e-1/fa14/class/cs9e-1bf/tmp/myrepo myrepocheckedout
     ....(Performe edit)
     svn commit -m "conflict resolved"
-    
+    svn del hello.cpp 
