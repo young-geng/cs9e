@@ -36,7 +36,7 @@ function runCat {
     else
         updateCatA;
     fi;
-    if [ $(bashcalc "c($mouseA - $oldCatA) > c($catA - $oldCatA) && c($catA - $mouseA) > c($catA - $oldCatA)") -eq 1 ]; then
+    if [ $(bashcalc "c($mouseA - $oldCatA) > c($catA - $oldCatA) && c($catA - $mouseA) > c($catA - $oldCatA) && $catL == 1") -eq 1 ]; then
         return 0;
     fi;
     return 1;
@@ -50,7 +50,6 @@ function printStep {
 
 
 for ((minute=1;minute <= 30; minute += 1)); do
-    minute=$(($minute + 1));
     echo "minute: $minute";
     if runCat; then
         echo "The cat catches the mouse !!!!!!!!!!";
@@ -59,6 +58,8 @@ for ((minute=1;minute <= 30; minute += 1)); do
     fi
     updateMouseA;
     printStep;
+    echo "";
+    echo "";
 done
 
 
