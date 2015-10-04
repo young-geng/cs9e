@@ -42,6 +42,7 @@ function updateCatL {
 	local catL=$1;
     if [ $(bashcalc "$catL < 2") -eq 1 ]; then
         catL=1;
+        echo $catL;
         return 0;
     fi;
     catL=$(bashcalc "$catL - 1");

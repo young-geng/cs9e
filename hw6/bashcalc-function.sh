@@ -35,7 +35,7 @@ function cosine {
 # Prints the angle given expressed as a value between 0 and 2pi
 function angle_reduce {
 	# ADD CODE HERE FOR PART 3
-    echo "a(s($1 + 2 * a(1)) / c($1 + 2 * a(1))) + 2 * a(1)" | bc -l;
+    python -c "import angles, sys; sys.stdout.write(str(angles.r2r($1)))"
 }
 
 
